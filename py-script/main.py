@@ -17,7 +17,7 @@ json.dump(json_inner, list_txt)
 
 os.system("cd C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
 for i in os.listdir(os.path.abspath("C:/Users/ivans/OneDrive/Документы/GitHub/PRG")):
-    if i != "main.scss":
+    if i not in ("main.scss", "main.py", "start.bat"):
         os.system("git add " + i)
 
 os.system(f"git commit -m \""+str(random.random()).split(".")[-1][::-1]+"\"")
