@@ -19,5 +19,5 @@ os.system("cd C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
 for i in os.listdir(os.path.abspath("C:/Users/ivans/OneDrive/Документы/GitHub/PRG")):
     os.system("git add " + i)
     
-os.system(f"git commit -m \"{random.random}\"")
+os.system(f"git commit -m \"{random.random()}\"")
 os.system(f"git push")
