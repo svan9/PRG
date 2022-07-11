@@ -21,3 +21,4 @@ for i in os.listdir(os.path.abspath("C:/Users/ivans/OneDrive/Документы/
 
 os.system(f"git commit -m \""+str(random.random()).split(".")[-1][::-1]+"\"")
 os.system(f"git push")
+os.system(f"cls")
