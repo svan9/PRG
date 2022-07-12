@@ -54,7 +54,7 @@ switch (getCookie("page")) {
     document.querySelector(".container").innerHTML = "";
     break;
 }
-
+console.log(document.location);
 fetch("/source/list.json")
   .then((res) => {
     return res.json();
