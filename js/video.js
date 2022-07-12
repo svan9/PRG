@@ -55,7 +55,7 @@ switch (getCookie("page")) {
     break;
 }
 console.log(document.location);
-fetch("/source/list.json")
+fetch(document.location.href+"/source/list.json")
   .then((res) => {
     return res.json();
   })
