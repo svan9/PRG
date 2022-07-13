@@ -16,7 +16,7 @@ json_inner = {
 
 def fold(path):
     if os.path.isfile(os.path.abspath(path)):
-        print("git add " + path)
+        print("git add " + path +"+")
         os.system("git add " + path)
     else:
         for i in os.listdir(os.path.abspath(path)):
@@ -27,7 +27,7 @@ def fold(path):
                 os.system("git add " + path+"\\"+i)
 
 os.system("cd C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
-fold(os.path.abspath(""))
+fold(os.path.abspath(''))
 # for i in os.listdir(os.path.abspath("C:/Users/ivans/OneDrive/Документы/GitHub/PRG")):
 #     # if i not in ("main.scss", "main.py", "start.bat"):
 #     if os.path.isfile(os.path.abspath(i)):

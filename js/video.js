@@ -56,6 +56,10 @@ switch (getCookie("page")) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+console.log(document.location);
+>>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
 =======
 console.log(document.location);
 >>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
