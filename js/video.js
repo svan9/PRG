@@ -54,27 +54,8 @@ switch (getCookie("page")) {
     document.querySelector(".container").innerHTML = "";
     break;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-console.log(document.location);
->>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
-=======
-console.log(document.location);
->>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
-=======
-console.log(document.location);
->>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
-=======
-console.log(document.location);
->>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
-=======
-console.log(document.location);
->>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
-fetch(document.location.href+"/source/list.json")
+
+fetch(document.location.href + "/source/list.json")
   .then((res) => {
     return res.json();
   })
@@ -102,7 +83,7 @@ fetch(document.location.href+"/source/list.json")
       </div>`;
         elem
           .querySelector("#v" + data.videos[i].split(".")[0])
-          .addEventListener("click", e => {
+          .addEventListener("click", (e) => {
             console.log(e.target);
           });
       }
