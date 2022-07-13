@@ -23,7 +23,7 @@ def fold(path):
             if os.path.isfile(os.path.abspath(path)):
                 fold(path)
             else:
-                print("add " + path+"/"+i)
+                print("add " + path+"/"+i+"-")
                 os.system("git add " + path+"/"+i)
 
 os.system("cd C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
