@@ -54,7 +54,7 @@ switch (getCookie("page")) {
     document.querySelector(".container").innerHTML = "";
     break;
 }
-fetch(document.location.href + "/source/list.json")
+fetch(document.location.href.replace("index.html", "") + "/source/list.json")
   .then((res) => {
     return res.json();
   })
@@ -63,28 +63,23 @@ fetch(document.location.href + "/source/list.json")
       for (let i in data.images) {
         document.querySelector(
           "image-container"
-        ).innerHTML += `<div class="img"><label>${
-          data.images[i].split(".")[0]
-        }</label><img id="${data.images[i]}" src="source/image/${
-          data.images[i]
-        }"></img></div>`;
+        ).innerHTML += `
+        <div class="img">
+          <label>${data.images[i].split(".")[0]}</label>
+          <img id="${data.images[i]}" src="source/image/${data.images[i]}"></img>
+        </div>`;
       }
     }
     if (document.querySelector("video-container")) {
+      var elem = document.querySelector("video-container");
       for (let i in data.videos) {
-        let elem = document.querySelector("video-container");
         elem.innerHTML += `
-      <div id="v${data.videos[i].split(".")[0]}">
-        <label>${data.videos[i].split(".")[0]}</label>
-        <video autoplay loop muted>
-          <source src="source/video/${data.videos[i]}">
+        <div id="v${data.videos[i].split(".")[0]}">
+          <label>${data.videos[i].split(".")[0]}</label>
+          <video autoplay loop muted>
+            <source src="source/video/${data.videos[i]}">
           </video>
-      </div>`;
-        elem
-          .querySelector("#v" + data.videos[i].split(".")[0])
-          .addEventListener("click", (e) => {
-            console.log(e.target);
-          });
+        </div>`;
       }
     }
   });
