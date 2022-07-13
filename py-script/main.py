@@ -16,15 +16,15 @@ json_inner = {
 
 def fold(path):
     if os.path.isfile(os.path.abspath(path)):
-        print("git add " + path +"+")
+        print("add " + path +"+")
         os.system("git add " + path)
     else:
         for i in os.listdir(os.path.abspath(path)):
             if os.path.isfile(os.path.abspath(path)):
                 fold(path)
             else:
-                print("git add " + path+"\\"+i)
-                os.system("git add " + path+"\\"+i)
+                print("add " + path+"/"+i)
+                os.system("git add " + path+"/"+i)
 
 os.system("cd C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
 fold("C:/Users/ivans/OneDrive/Документы/GitHub/PRG")
