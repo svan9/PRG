@@ -54,6 +54,10 @@ switch (getCookie("page")) {
     document.querySelector(".container").innerHTML = "";
     break;
 }
+<<<<<<< HEAD
+=======
+console.log(document.location);
+>>>>>>> 6bb49d62eeaa962580d5dd7bcb50760565f79ac9
 fetch(document.location.href+"/source/list.json")
   .then((res) => {
     return res.json();
