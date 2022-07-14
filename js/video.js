@@ -55,18 +55,16 @@ switch (getCookie("page")) {
     break;
 }
 fetch(document.location.href.replace("index.html", "") + "/source/list.json")
-  .then((res) => {
-    return res.json();
-  })
+  .then((res) => res.json())
   .then((data) => {
     if (document.querySelector("image-container")) {
       for (let i in data.images) {
-        document.querySelector(
-          "image-container"
-        ).innerHTML += `
+        document.querySelector("image-container").innerHTML += `
         <div class="img">
           <label>${data.images[i].split(".")[0]}</label>
-          <img id="${data.images[i]}" src="source/image/${data.images[i]}"></img>
+          <img id="${data.images[i]}" src="source/image/${
+          data.images[i]
+        }"></img>
         </div>`;
       }
     }
