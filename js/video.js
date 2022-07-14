@@ -54,9 +54,9 @@ switch (getCookie("page")) {
     document.querySelector(".container").innerHTML = "";
     break;
 }
-fetch(document.location.href.replace("index.html", "") + "/source/list.json")
-  .then((res) => res.json())
-  .then((data) => {
+$.getJSON(
+  document.location.href.replace("index.html", "") + "/source/list.json",
+  (data) => {
     if (document.querySelector("image-container")) {
       for (let i in data.images) {
         document.querySelector("image-container").innerHTML += `
@@ -80,4 +80,5 @@ fetch(document.location.href.replace("index.html", "") + "/source/list.json")
         </div>`;
       }
     }
-  });
+  }
+);
